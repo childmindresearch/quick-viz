@@ -1,5 +1,5 @@
 # Quick Viz Tools
-Short-and-sweet cookie cutter visualization scripts or utilities, intended to lower the barrier for looking at all of our results, all of the time. Explore the table below of examples, or add yours following the [Contribution Instructions](#Contribution-Instructions), below.
+Short-and-sweet cookie cutter visualization scripts or utilities, intended to lower the barrier for looking at all of our results, all of the time. Explore the table below of examples, or add yours following the [Contribution Instructions](#Contribution-Instructions), below. An important note is that these are not intended to be perfect or pollished, but to provide quick and easy to use utilities that help streamline our development and testing cycles. Don't be shy to add a new tool, or update one that is here to better suit your needs.
 
 | Tool | Purpose | Relevant data | Example |
 |------|---------|---------------|---------|
