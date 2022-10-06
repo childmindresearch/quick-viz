@@ -10,7 +10,7 @@ Short-and-sweet cookie cutter visualization scripts or utilities, intended to lo
 Each time you encounter a new type of data that you need to look at, or new way you need to look at old data, ask yourself the question, "is there a possibility that I, or others, may need to do this again?" If the answer is yes, then consider adding it here. When adding a script/tool to this repository, we should try our best to adhere to the following guidelines:
 
 1. Place your script/tool inside the `code/` folder. The code should:
-   1. Be named according to the convention `plot_{file-extension}_{plot-type}.py` (or whatever programming language-specific extension is relevant)
+   1. Be named according to the convention `plot_{file-extension}_{plot-type}.py` (or whatever programming language-specific extension is relevant). Note that for compound extensions, join values with a `-` instead of a `.`, to avoid confusion (e.g., a function operating on `dscalar.nii` data should be written as `plot_dscalar-nii_{plot_type}`). 
    2. Accept command-line arguments for input data and where the output should be saved.
    3. Provide brief descriptions of each parameter
    4. Include a usage example where the paths/values are provided to the script.
