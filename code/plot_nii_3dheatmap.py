@@ -26,7 +26,7 @@ def main():
     results = parser.parse_args()
 
     im = nib.load(results.in_nii)
-    plot_img(im, black_bg=False, output_file=results.plot_loc)
+    plot_img(im, black_bg=True, output_file=results.plot_loc, threshold='auto')
 
 
 if __name__ == "__main__":
