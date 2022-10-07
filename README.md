@@ -5,6 +5,7 @@ Short-and-sweet cookie cutter visualization scripts or utilities, intended to lo
 |------|---------|---------------|---------|
 | [`plot_tsv_heatmap.py`](./code/plot_tsv_heatmap.py)  | Visualize TSV-stored matrices  | Connectomes, any numeric matrix | ![plot_tsv_heatmap example](./examples/plot_tsv_heatmap.png)  |
 | [`plot_nii_3dheatmap.py`](./code/plot_nii_3dheatmap.py)  | Visualize Nii-stored 3D brain data  | Structural Nii, Mean functional Nii, other 3D contrast | ![plot_nii_3dheatmap example](./examples/plot_nii_3dheatmap.png)  |
+| [`plot_nii_overlay.py`](./code/plot_nii_overlay.py)  | Compare placement/alignment of two images  | Structural Nii, Mean functional Nii, other 3D contrast | ![plot_nii_overlay example](./examples/plot_nii_overlay.png)  |
 
 
 ## Contribution Instructions
