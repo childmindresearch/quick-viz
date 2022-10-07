@@ -4,6 +4,7 @@ Short-and-sweet cookie cutter visualization scripts or utilities, intended to lo
 | Tool | Purpose | Relevant data | Example |
 |------|---------|---------------|---------|
 | [`plot_tsv_heatmap.py`](./code/plot_tsv_heatmap.py)  | Visualize TSV-stored matrices  | Connectomes, any numeric matrix | ![plot_tsv_heatmap example](./examples/plot_tsv_heatmap.png)  |
+| [`plot_nii_3dheatmap.py`](./code/plot_nii_3dheatmap.py)  | Visualize Nii-stored 3D brain data  | Structural Nii, Mean functional Nii, other 3D contrast | ![plot_nii_3dheatmap example](./examples/plot_nii_3dheatmap.png)  |
 
 
 ## Contribution Instructions
