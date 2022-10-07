@@ -16,7 +16,7 @@ See a plot type you want to recreate or use in your own work? The path to adopti
 2. Look for the corresponding `resources/requirements/req*` file to describe what is needed for the tool to run. If it is a Python tool, you can likely satisfy all of these requirements by running `pip install -r {relevant_requirements_file}` inside of the Python environment of your choosing.
 3. Look at the usage example at the top of the plot type you're interested in, to make sure you know how to provide the arguments.
 4. Apply to your own data! Just replace the made-up paths and parameter values shown in the docstring with the real data paths relevant for your work.
-5. Hit issues? Open a question here using the [/issues/new](/issues/new/) tab, or patch the bug, as you wish.
+5. Hit issues? Open a question here using the [issues](https://github.com/FCP-INDI/quick-viz/issues) tab, or patch the bug, as you wish.
 
 
 ## Contribution Instructions
