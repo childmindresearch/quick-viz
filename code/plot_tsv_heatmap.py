@@ -3,7 +3,7 @@
 """
 Example usage:
 
-python plot_tsv_heatmap.py /path/to/my/data.tsv /path/to/my/data_tsv_image.png
+python plot_tsv_heatmap.py /path/to/my/data.tsv /path/to/my/image.png
 
 """
 

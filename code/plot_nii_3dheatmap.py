@@ -3,7 +3,7 @@
 """
 Example usage:
 
-python plot_nii_3dheatmap.py /path/to/my/data.nii.gz /path/to/my/data_tsv_image.png
+python plot_nii_3dheatmap.py /path/to/my/data.nii.gz /path/to/my/image.png
 
 """
 

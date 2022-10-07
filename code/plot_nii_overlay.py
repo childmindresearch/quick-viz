@@ -4,7 +4,7 @@
 Example usage:
 
 python plot_nii_overlay.py /path/to/my/data.nii.gz \
-                           /path/to/my/data_tsv_image.png \
+                           /path/to/my/image.png \
                            -b /path/to/reference/data.nii.gz
 
 """
