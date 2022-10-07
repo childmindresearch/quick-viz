@@ -9,6 +9,16 @@ Short-and-sweet cookie cutter visualization scripts or utilities, intended to lo
 | [`plot_nii_similarity.py`](./code/plot_nii_similarity.py)  | Compare signal distributions of two images  | Any two Nii images of the same shape | ![plot_nii_similarity example](./examples/plot_nii_similarity.png)  |
 
 
+## Usage Instructions
+See a plot type you want to recreate or use in your own work? The path to adoption should be as follows:
+
+1. Clone/Download this repository locally, so you have all of the files.
+2. Look for the corresponding `resources/requirements/req*` file to describe what is needed for the tool to run. If it is a Python tool, you can likely satisfy all of these requirements by running `pip install -r {relevant_requirements_file}` inside of the Python environment of your choosing.
+3. Look at the usage example at the top of the plot type you're interested in, to make sure you know how to provide the arguments.
+4. Apply to your own data! Just replace the made-up paths and parameter values shown in the docstring with the real data paths relevant for your work.
+5. Hit issues? Open a question here using the [/issues/new](/issues/new/) tab, or patch the bug, as you wish.
+
+
 ## Contribution Instructions
 Each time you encounter a new type of data that you need to look at, or new way you need to look at old data, ask yourself the question, "is there a possibility that I, or others, may need to do this again?" If the answer is yes, then consider adding it here. When adding a script/tool to this repository, we should try our best to adhere to the following guidelines:
 
