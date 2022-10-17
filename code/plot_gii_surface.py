@@ -1,38 +1,37 @@
+#!/usr/bin/env python
+
 """ 
 
 Example usage:
-
 python plot_gii_surface.py /path/to/my/mesh /path/to/my/map.gii \
                           <hemisphere> /path/to/my/img.png \
-                          [view]
+                          <view>
 
 """
 
 import nilearn
-import sys
 from nilearn import plotting
+from argparse import ArgumentParser
 
 def main():
 
+  parser = ArgumentParser("Visualize surface data")
+  parser.add_argument('in_mesh', help="Surface mesh: .gii or Freesurfer specific files \
+                                      such as .orig, .pial, .sphere, .white, .inflated")
+  parser.add_argument('in_map', help="Data to visualize: valid formats are .gii, .mgz, .nii, \
+                                      .nii.gz, or Freesurfer specific files such as .thickness, \
+                                      .area, .curv, .sulc, .annot, .label")
+  parser.add_argument("hem", help="Hemisphere: 'right' or 'left'")
+  parser.add_argument("plot_loc", help="Target location of plot")
+  parser.add_argument("view", help="Brain view: ‘lateral’, ‘medial’, ‘dorsal’, 'ventral', \
+                                        'anterior', 'posterior' (Default = Lateral)") 
   
-  in_mesh = sys.argv[1]    # Surface mesh (.gii or Freesurfer specific files such as .orig, 
-                           #                 .pial, .sphere, .white, .inflated
-  in_map = sys.argv[2]     # Surface map (Can be a file (valid formats are .gii, .mgz, .nii, .nii.gz, 
-                           #                 or Freesurfer specific files such as .thickness, .area, 
-                           #                 .curv, .sulc, .annot, .label) or a Numpy array with a 
-                           #                 value for each vertex of the surf_mesh
-  hem = sys.argv[3]        # Hemisphere ('right' or 'left')
-  plot_loc = sys.argv[4]   # Target location of plot
-  
-  if len(sys.argv) == 6:
-    view = sys.argv[5]     # Brain view - ‘lateral’, ‘medial’, ‘dorsal’, 
-                           #                 ‘ventral’, ‘anterior’, ‘posterior’
-                           #                 (Default = lateral)
-  else:
-    view = 'lateral'
-  
-  fig = nilearn.plotting.plot_surf(in_mesh, surf_map=in_map, hemi=hem, 
-                                    view=view, output_file=plot_loc) 
+  results = parser.parse_args()
+  fig = nilearn.plotting.plot_surf(results.in_mesh, surf_map=results.in_map, 
+                                    hemi=results.hem, view=results.view, 
+                                    output_file=results.plot_loc) 
 
+  
 if __name__ == "__main__":
   main()
+
