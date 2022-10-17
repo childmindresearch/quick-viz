@@ -7,7 +7,7 @@ Short-and-sweet cookie cutter visualization scripts or utilities, intended to lo
 | [`plot_nii_3dheatmap.py`](./code/plot_nii_3dheatmap.py)  | Visualize Nii-stored 3D brain data  | Structural Nii, Mean functional Nii, other 3D contrast | ![plot_nii_3dheatmap example](./examples/plot_nii_3dheatmap.png)  |
 | [`plot_nii_overlay.py`](./code/plot_nii_overlay.py)  | Compare placement/alignment of two images  | Structural Nii, Mean functional Nii, other 3D contrast | ![plot_nii_overlay example](./examples/plot_nii_overlay.png)  |
 | [`plot_nii_similarity.py`](./code/plot_nii_similarity.py)  | Compare signal distributions of two images  | Any two Nii images of the same shape | ![plot_nii_similarity example](./examples/plot_nii_similarity.png)  |
-| [`plot_gii_surface.py`](./code/plot_gii_surface.py)  | Visualize data on the surface  | Surface mesh file, data to be displayed on surface mesh | ![plot_gii_surface example](./examples/plot_gii_surface.png)  |
+| [`plot_gii_surface.py`](./code/plot_gii_surface.py)  | Visualize data on the surface  | Surface mesh file, volumetric nii data to be displayed on surface mesh | ![plot_gii_surface example](./examples/plot_gii_surface.png)  |
 
 
 ## Usage Instructions
