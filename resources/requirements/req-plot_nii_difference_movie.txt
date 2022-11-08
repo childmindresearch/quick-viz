@@ -1,0 +1,6 @@
+matplotlib
+nilearn
+nibabel
+numpy
+ffmpeg
+viz_utils
