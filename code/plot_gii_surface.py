@@ -10,6 +10,7 @@ python plot_gii_surface.py /path/to/my/mesh /path/to/my/map.gii \
 """
 
 import nilearn
+from nilearn import plotting
 from argparse import ArgumentParser
 
 def main():
@@ -26,7 +27,7 @@ def main():
                                         'anterior', 'posterior' (Default = Lateral)") 
   
   results = parser.parse_args()
-  fig = nilearn.plotting.plot_surf(results.in_mesh, surf_map=results.in_map, 
+  fig = plotting.plot_surf(results.in_mesh, surf_map=results.in_map, 
                                     hemi=results.hem, view=results.view, 
                                     output_file=results.plot_loc) 
 
