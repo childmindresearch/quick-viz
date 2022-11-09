@@ -9,7 +9,6 @@ python plot_gii_surface.py /path/to/my/mesh /path/to/my/map.gii \
 
 """
 
-import nilearn
 from nilearn import plotting
 from argparse import ArgumentParser
 
