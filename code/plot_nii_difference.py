@@ -48,6 +48,9 @@ def main(args: argparse.Namespace):
         logging.info("Indexing images at %d", args.index)
         imgs[0] = nilimg.index_img(imgs[0], args.index)
         imgs[1] = nilimg.index_img(imgs[1], args.index + args.index_offset)
+        index = args.index
+    else:
+        index = None
 
     if args.masks is not None:
         for ii, path in enumerate(args.masks):
@@ -72,7 +75,7 @@ def main(args: argparse.Namespace):
         labels=args.labels,
         fig=f,
         axs=axs,
-        index=args.index,
+        index=index,
         cut_coords=cut_coords,
         vmax=args.vmax,
         colorbar=args.colorbar,
