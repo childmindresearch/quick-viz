@@ -28,6 +28,10 @@ def main():
     parser.add_argument('-b', '--background', help="Background (reference) image")
     parser.add_argument('-v', '--volume', type=int,
                         help="Single 3D volume from a 4D stack to show")
+
+    # TODO:
+    #  - accept function option, to turn 4D data into 3D (e.g., mean)
+    #  - accept coordinates option to ensure reproduc- and customiz-ability
     parser.add_argument('--cmap', default='viridis', help="Colormap for visualization")
     parser.add_argument('-t', '--title', type=str,
                         help="Title for the image")
