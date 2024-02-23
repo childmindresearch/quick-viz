@@ -49,11 +49,9 @@ def main():
 
     if results.background:
         bg = nib.load(results.background)
-        title_font_size = max(10, min(20, 1000 / len(results.title)))
         plot_stat_map(im, bg_img = bg, output_file=results.plot_loc,
                       black_bg=True, threshold=lb, title=results.title, cmap=results.cmap, alpha=float(results.alpha))
     else:
-        title_font_size = max(10, min(20, 1000 / len(results.title)))
         plot_stat_map(im, output_file=results.plot_loc,
                       black_bg=True, threshold=lb, title=results.title, cmap=results.cmap, alpha=float(results.alpha))
 
