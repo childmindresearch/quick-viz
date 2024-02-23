@@ -8,7 +8,7 @@ python plot_nii_overlay.py /path/to/my/data.nii.gz \
                            -b /path/to/reference/data.nii.gz \
                            -v 1 \
                            --cmap inferno \
-                           -- t Title of the plot \
+                           --title Title of the plot \
                            --alpha 0.5 \
                            --threshold 10
 
