@@ -25,7 +25,7 @@ def main():
     parser = ArgumentParser("Produce a 3D intensity view of a brain on another")
     parser.add_argument('in_nii', help="3D Nifti data to visualize")
     parser.add_argument('plot_loc', help="Target location for plot")
-    parser.add_argument('-b', '--background', help="Background (reference) image ")
+    parser.add_argument('-b', '--background', help="Background (reference) image")
     parser.add_argument('-v', '--volume', type=int,
                         help="Single 3D volume from a 4D stack to show")
 
