@@ -6,7 +6,11 @@ Example usage:
 python plot_nii_overlay.py /path/to/my/data.nii.gz \
                            /path/to/my/image.png \
                            -b /path/to/reference/data.nii.gz \
-                           -v 1
+                           -v 1 \
+                           --cmap inferno \
+                           --title Title of the plot \
+                           --alpha 0.5 \
+                           --threshold 10
 
 """
 
@@ -25,10 +29,14 @@ def main():
     parser.add_argument('-v', '--volume', type=int,
                         help="Single 3D volume from a 4D stack to show")
 
-
     # TODO:
     #  - accept function option, to turn 4D data into 3D (e.g., mean)
     #  - accept coordinates option to ensure reproduc- and customiz-ability
+    parser.add_argument('--cmap', default='viridis', help="Colormap for visualization")
+    parser.add_argument('-t', '--title', type=str,
+                        help="Title for the image")
+    parser.add_argument('--alpha', default=0.8, help="Opacity for overlay visualization")
+    parser.add_argument('--threshold', default=20, help="Threshold for the plot")
 
     results = parser.parse_args()
 
@@ -37,16 +45,15 @@ def main():
         v = results.volume
         im = nib.Nifti1Image(im.get_fdata()[:,:,:,v], header=im.header, affine=im.affine)
 
-    # Note: this threshold is arbitrary
-    lb = np.percentile(np.sort(np.unique(im.get_fdata())), 20)
+    lb = np.percentile(np.sort(np.unique(im.get_fdata())), float(results.threshold))
 
     if results.background:
         bg = nib.load(results.background)
         plot_stat_map(im, bg_img = bg, output_file=results.plot_loc,
-                      black_bg=True, threshold=lb)
+                      black_bg=True, threshold=lb, title=results.title, cmap=results.cmap, alpha=float(results.alpha))
     else:
         plot_stat_map(im, output_file=results.plot_loc,
-                      black_bg=True, threshold=lb)
+                      black_bg=True, threshold=lb, title=results.title, cmap=results.cmap, alpha=float(results.alpha))
 
 
 if __name__ == "__main__":
